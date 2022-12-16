@@ -25,6 +25,21 @@
 </script>
 
 <span>
-	Redirecting to <a href="{data.baseUrl}/@{data.username}">@{data.username}</a> at
-	<a href={data.baseUrl}>{data.domain}</a> in {count}
+	Redirecting
+	<br /> to <a href="{data.baseUrl}/@{data.username}">@{data.username}</a>
+	<br /> at <a href="{data.baseUrl}/about">{data.domain}</a>
+	<br />
+	<span style="font-size: 1rem" class:translucent={!(intervalId && count)}>
+		{#if count}
+			<span>in {count} {count > 1 ? 'seconds' : 'second'}</span>
+		{:else}
+			<span>now.</span>
+		{/if}
+	</span>
 </span>
+
+<style>
+	.translucent {
+		opacity: 20%;
+	}
+</style>
