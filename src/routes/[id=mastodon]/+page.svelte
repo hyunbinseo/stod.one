@@ -12,7 +12,10 @@
 	if (browser) {
 		intervalId = window.setInterval(() => {
 			if (count) count -= 1;
-			if (!count) goto(data.baseUrl, { replaceState: true });
+			if (!count) {
+				clearTimeout(intervalId);
+				goto(data.baseUrl, { replaceState: true });
+			}
 		}, 1000);
 	}
 
