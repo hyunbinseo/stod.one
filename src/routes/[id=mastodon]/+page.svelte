@@ -14,7 +14,7 @@
 			if (count) count -= 1;
 			if (!count) {
 				clearTimeout(intervalId);
-				goto(data.baseUrl, { replaceState: true });
+				goto(`${data.baseUrl}/@${data.username}`, { replaceState: true });
 			}
 		}, 1000);
 	}
