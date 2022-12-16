@@ -1,9 +1,8 @@
 import type { Handle } from '@sveltejs/kit';
-import { homepage } from '../package.json' assert { type: 'json' };
 
 export const handle = (({ event, resolve }) => {
   if (event.url.pathname === '/')
-    return Response.redirect(homepage, 302)
+    return Response.redirect('https://github.com/hyunbinseo/stod.one#readme', 302)
 
   return resolve(event);
 }) satisfies Handle;
