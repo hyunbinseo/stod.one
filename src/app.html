@@ -1,42 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<style>
+			body {
+				font-family: sans-serif;
+				font-size: 1.5rem;
+				line-height: 2rem;
+			}
 
-<head>
-	<meta charset="utf-8" />
-	<link rel="icon" href="%sveltekit.assets%/favicon.ico" />
-	<meta name="viewport" content="width=device-width" />
-	<style>
-		body {
-			font-family: sans-serif;
-			font-size: 1.5rem;
-			line-height: 2rem;
-		}
+			body,
+			noscript {
+				margin: 0;
+				position: fixed;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: #313543;
+				color: white;
+			}
 
-		body,
-		noscript {
-			margin: 0;
-			position: fixed;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			background-color: #313543;
-			color: white;
-		}
+			a {
+				color: #9baec8;
+			}
+		</style>
+		%sveltekit.head%
+	</head>
 
-		a {
-			color: #9BAEC8;
-		}
-
-	</style>
-	%sveltekit.head%
-</head>
-
-<body data-sveltekit-preload-data="hover">
-	<div style="display: contents">%sveltekit.body%</div>
-</body>
-
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
 </html>
