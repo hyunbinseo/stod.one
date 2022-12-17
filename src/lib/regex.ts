@@ -1,3 +1,4 @@
+export const mastodonProfileUrl = /^https:\/\/[^/]+\/(?:users\/|@)([a-zA-Z0-9_]+)$/;
 export const mastodonId = /^@([a-zA-Z0-9_]+)@((?:[a-z]+.)[a-z]+.[a-z]{2,})$/;
 
 export const htmlHead = {

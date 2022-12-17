@@ -14,7 +14,7 @@
 			if (count) count -= 1;
 			if (!count) {
 				clearTimeout(intervalId);
-				goto(`${data.baseUrl}/@${data.username}`, { replaceState: true });
+				goto(`${data.url}`, { replaceState: true });
 			}
 		}, 1000);
 	}
@@ -32,8 +32,8 @@
 
 <span>
 	Redirecting
-	<br /> to <a href="{data.baseUrl}/@{data.username}">@{data.username}</a>
-	<br /> at <a href="{data.baseUrl}/about">{data.domain}</a>
+	<br /> to <a href={data.url}>@{data.username}</a>
+	<br /> at {data.domain}
 	<br />
 	<span style="font-size: 1rem" class:translucent={!(intervalId && count)}>
 		{#if count}
