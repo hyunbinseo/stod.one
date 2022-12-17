@@ -1,13 +1,14 @@
 {
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true,
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.organizeImports": true
-  },
-  "files.insertFinalNewline": true,
-  "[svelte]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+	"editor.tabSize": 2,
+	"editor.insertSpaces": true,
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true,
+		"source.organizeImports": true
+	},
+	"files.insertFinalNewline": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }
