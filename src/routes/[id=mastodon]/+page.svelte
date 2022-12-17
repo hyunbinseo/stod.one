@@ -24,6 +24,12 @@
 	});
 </script>
 
+<svelte:head>
+	<meta name="robots" content="noindex" />
+	<meta name="twitter:card" content="summary" />
+	{@html data.metadata}
+</svelte:head>
+
 <span>
 	Redirecting
 	<br /> to <a href="{data.baseUrl}/@{data.username}">@{data.username}</a>
