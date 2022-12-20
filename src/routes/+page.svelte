@@ -84,6 +84,12 @@
 	form {
 		display: flex;
 		margin-top: 16px;
+		position: relative;
+	}
+
+	input:focus,
+	button:focus {
+		z-index: 1; /* Fix focus outline on Safari */
 	}
 
 	input,
@@ -92,7 +98,7 @@
 		padding: 0.625rem;
 		font-size: 0.875rem;
 		border: none;
-		border-radius: 0; /* Required for iOS Safari */
+		border-radius: 0; /* Fix border-radius on iOS Safari */
 	}
 
 	input {
