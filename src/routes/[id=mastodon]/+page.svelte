@@ -30,7 +30,7 @@
 	{@html data.metadata}
 </svelte:head>
 
-<span>
+<div>
 	Redirecting
 	<br /> to <a href={data.url}>@{data.username}</a>
 	<br /> at {data.domain}
@@ -42,9 +42,12 @@
 			<span>now.</span>
 		{/if}
 	</span>
-</span>
+</div>
 
 <style>
+	div {
+		margin: auto 0;
+	}
 	.translucent {
 		opacity: 20%;
 	}

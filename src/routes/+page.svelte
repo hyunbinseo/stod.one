@@ -72,7 +72,8 @@
 <style>
 	.header {
 		width: 320px;
-		margin-bottom: 48px;
+		padding-bottom: 48px;
+		margin: auto 0;
 	}
 
 	.header-image {
