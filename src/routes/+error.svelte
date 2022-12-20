@@ -5,7 +5,7 @@
 	const message = $page.status === 404 ? 'User not found.' : 'Something went wrong.';
 </script>
 
-<span style="text-align: center;">
+<span style="text-align: center">
 	{message}
 	{#if $page.status === 500}
 		<br />
