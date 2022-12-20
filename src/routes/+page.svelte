@@ -1,8 +1,15 @@
 <script lang="ts">
+	import { browser } from '$app/environment';
 	import { mastodonId } from '$lib/regex';
-	import { tick } from 'svelte';
+	import { onMount, tick } from 'svelte';
 
 	let id: string;
+	let idInput: HTMLInputElement;
+
+	onMount(async () => {
+		if (browser && idInput) idInput.focus();
+	});
+
 	$: [validId] = (id || '').match(mastodonId) || [];
 
 	let url: string;
@@ -43,7 +50,12 @@
 			{#if !url}
 				<span>{!validId ? 'Enter Mastodon ID' : 'Press Generate'}</span>
 				<form on:submit|preventDefault={generateUrl}>
-					<input bind:value={id} type="text" placeholder="@username@example.com" />
+					<input
+						bind:value={id}
+						bind:this={idInput}
+						type="text"
+						placeholder="@username@example.com"
+					/>
 					<button disabled={!validId}>Generate</button>
 				</form>
 			{:else}
