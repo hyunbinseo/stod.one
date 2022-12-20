@@ -7,7 +7,7 @@
 		<slot />
 	</div>
 	<footer>
-		<a href={gitHubRepoUrl}>stod.one</a> by
+		<a href="{gitHubRepoUrl}/#readme">stod.one</a> by
 		<a href={gitHubUserUrl}>Hyunbin</a>
 	</footer>
 </div>

@@ -1,10 +1,7 @@
-# STOD.ONE
+# StodOne
 
-An alternate URL for a Mastodon profile.\
-Simply put the username after the domain.
+Generate Mastodon profile links that can be [shared in tweets](https://www.bbc.com/news/technology-63999452).
 
-Example: `stod.one/@username@mastodon.domain`
+Follow the [interactive guide](https://stod.one/) or place the ID after `stod.one/`
 
-## Why does this exist?
-
-Mastodon links are blocked by Twitter.
+Example: [stod.one/@Mastodon@mastodon.social](https://stod.one/@Mastodon@mastodon.social)
