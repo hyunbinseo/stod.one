@@ -15,6 +15,7 @@
 <style>
 	.container {
 		height: 100%;
+		width: 100%;
 		overflow-y: auto;
 		display: flex;
 		flex-direction: column;
@@ -22,10 +23,11 @@
 	.slot {
 		flex: 1;
 		display: flex;
+		margin: 0 auto;
 	}
 	footer {
 		text-align: center;
 		font-size: 1rem;
-		margin-bottom: 1rem;
+		margin: 0 auto 1rem;
 	}
 </style>
