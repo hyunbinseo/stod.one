@@ -1,13 +1,25 @@
 <script lang="ts">
 	import { mastodonId } from '$lib/regex';
+	import { tick } from 'svelte';
 
 	let id: string;
 	$: [validId] = (id || '').match(mastodonId) || [];
 
-	const generateUrl = () => {
-		let prompt = window.prompt('Copy the following URL', `https://stod.one/${validId}`);
-		// If prompt is not canceled, reset input
-		if (prompt !== null) id = '';
+	let url: string;
+	let urlInput: HTMLInputElement;
+
+	const generateUrl = async () => {
+		url = `https://stod.one/${validId}`;
+		await tick();
+		id = '';
+		if (urlInput) {
+			urlInput.focus();
+			urlInput.select();
+		}
+	};
+
+	const reset = () => {
+		url = '';
 	};
 </script>
 
@@ -28,15 +40,19 @@
 			alt="Mastodon default avatar"
 		/>
 		<div class="header-tabs-name">
-			{#if !validId}
-				<span>Enter Mastodon ID</span>
+			{#if !url}
+				<span>{!validId ? 'Enter Mastodon ID' : 'Press Generate'}</span>
+				<form on:submit|preventDefault={generateUrl}>
+					<input bind:value={id} type="text" placeholder="@username@example.com" />
+					<button disabled={!validId}>Generate</button>
+				</form>
 			{:else}
-				<span>Press Generate</span>
+				<span>Copy generated URL</span>
+				<form on:submit|preventDefault>
+					<input readonly bind:this={urlInput} type="text" value={url} />
+					<button type="button" on:click={reset}>Reset</button>
+				</form>
 			{/if}
-			<form on:submit|preventDefault={generateUrl}>
-				<input bind:value={id} type="text" placeholder="@username@example.com" />
-				<button disabled={!validId}>Generate</button>
-			</form>
 		</div>
 	</div>
 </div>
