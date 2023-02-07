@@ -7,9 +7,3 @@ declare namespace App {
 	// interface PageData {}
 	// interface Platform {}
 }
-
-declare namespace NodeJS {
-	export interface ProcessEnv {
-		CF_PAGES_URL: string;
-	}
-}
