@@ -25,17 +25,18 @@
 		}
 	};
 
-	const reset = () => {
-		url = '';
-	};
+	const reset = () => (url = '');
+
+	const title = 'Mastodon Profile for Twitter | StodOne';
+	const description =
+		'Create redirect links that work on Twitter. Major Mastodon domains are blocked, so URLs – even the shortened ones – cannot be shared in tweets.';
 </script>
 
 <svelte:head>
-	<title>Mastodon Profile for Twitter | StodOne</title>
-	<meta
-		name="description"
-		content="Create redirect links that work on Twitter. Major Mastodon domains are blocked, so URLs – even the shortened ones – cannot be shared in tweets."
-	/>
+	<title>{title}</title>
+	<meta property="og:title" content={title} />
+	<meta name="description" content={description} />
+	<meta property="og:description" content={description} />
 </svelte:head>
 
 <div class="header">
